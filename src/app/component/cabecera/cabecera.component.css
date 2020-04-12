@@ -1,7 +1,7 @@
 .jumbotron {
-  padding: 20px 2rem 27px;
+  padding: 10px 10px 10px 10px;
   background: rgb(121, 177, 190);
-  margin: 0 auto 25px;
+  margin: 0 auto 10px;
   border-radius: 0;
   background-image: url("https://cdn.jsdelivr.net/gh/fbronchaly/angular-covid19-ympezx@master/src/app/component/shared/covid.png");
   background-size: cover;
