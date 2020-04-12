@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+// Rutas
+import { APP_ROUTING } from './app.routes';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -11,9 +13,10 @@ import { FooterComponent } from './component/footer/footer.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 
 
+
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, PrincipalComponent, CabeceraComponent, BodyComponent, FooterComponent, NavbarComponent ],
+  imports:      [ BrowserModule, FormsModule,APP_ROUTING  ],
+  declarations: [ AppComponent, HelloComponent, PrincipalComponent, CabeceraComponent, BodyComponent, FooterComponent, NavbarComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

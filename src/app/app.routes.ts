@@ -1,0 +1,9 @@
+import { RouterModule, Routes } from '@angular/router';
+import { BodyComponent } from './component/body/body.component';
+
+const APP_ROUTES: Routes = [
+  { path: 'home', component: BodyComponent },
+ { path: '**', pathMatch: 'full', redirectTo: 'home' }
+];
+
+export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES, {useHash:true});
