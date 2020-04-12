@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 // Rutas
 import { APP_ROUTING } from './app.routes';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -17,7 +18,7 @@ import { Panel2Component } from './component/panel2/panel2.component';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,APP_ROUTING  ],
+  imports:      [ BrowserModule, FormsModule,APP_ROUTING,RouterModule ],
   declarations: [ AppComponent, HelloComponent, PrincipalComponent, CabeceraComponent, BodyComponent, FooterComponent, NavbarComponent, Panel1Component, Panel2Component],
   bootstrap:    [ AppComponent ]
 })
