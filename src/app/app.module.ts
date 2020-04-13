@@ -14,12 +14,13 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 import { Panel1Component } from './component/panel1/panel1.component';
 import { Panel2Component } from './component/panel2/panel2.component';
 import { ConsentimientoComponent } from './component/consentimiento/consentimiento.component';
+import { EncuestaComponent } from './component/encuesta/encuesta.component';
 
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,APP_ROUTING,RouterModule ],
-  declarations: [ AppComponent, HelloComponent, CabeceraComponent, BodyComponent, FooterComponent, NavbarComponent, Panel1Component, Panel2Component, ConsentimientoComponent],
+  declarations: [ AppComponent, HelloComponent, CabeceraComponent, BodyComponent, FooterComponent, NavbarComponent, Panel1Component, Panel2Component, ConsentimientoComponent, EncuestaComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
