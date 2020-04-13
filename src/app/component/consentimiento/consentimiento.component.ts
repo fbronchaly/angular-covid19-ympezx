@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../auth.service';
 
 @Component({
   selector: 'app-consentimiento',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsentimientoComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public auth:AuthService
+  ) { }
 
   ngOnInit() {
   }
