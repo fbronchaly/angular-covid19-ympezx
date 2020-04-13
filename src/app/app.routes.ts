@@ -5,13 +5,21 @@ import { Panel2Component } from './component/panel2/panel2.component';
 import { ConsentimientoComponent } from './component/consentimiento/consentimiento.component';
 import { EncuestaComponent } from './component/encuesta/encuesta.component';
 import { ProfileComponent } from './component/profile/profile.component';
+import {AuthGuard } from './auth.guard';
+
 
 const APP_ROUTES: Routes = [
   { path: 'investigadoras', component: Panel1Component },
   { path: 'instrucciones', component: Panel2Component },
   { path: 'consentimiento', component:ConsentimientoComponent },
    { path: 'encuesta', component: EncuestaComponent },
-   { path: 'profile', component: ProfileComponent },
+    { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]
+ },
+     
+     
+     
+   
+
  { path: '**', pathMatch: 'full', redirectTo: 'investigadoras' }
 ];
 
