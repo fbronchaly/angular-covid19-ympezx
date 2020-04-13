@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormBuilder, Validators } from "@angular/forms";
 
 
 @Component({
@@ -6,11 +7,30 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './encuesta.component.html',
   styleUrls: ['./encuesta.component.css']
 })
-export class EncuestaComponent implements OnInit {
+export class EncuestaComponent  {
 
-  constructor() { }
+  isSubmitted = false;
 
-  ngOnInit() {
+  constructor(public fb: FormBuilder) { }
+
+  /*########### Form ###########*/
+  registrationForm = this.fb.group({
+    gender: ['male', [Validators.required]]
+  })
+
+  // Getter method to access form control
+  get myForm() {
+    return this.registrationForm.get('gender');
   }
+
+  // Submit Registration Form
+  onSubmit() {
+    this.isSubmitted = true;
+    if(!this.registrationForm.valid) {
+      return false;
+    } else {
+      alert(JSON.stringify(this.registrationForm.value))
+    }
+  }  
 
 }

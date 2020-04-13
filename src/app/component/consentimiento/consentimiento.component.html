@@ -36,9 +36,17 @@ Los investigadores clínicos se comprometen a garantizar la confidencialidad de 
            <div class="card-body">
     <h5 class="card-title ">Consentimiento informado</h5>
     <p class="card-text">Por favor, antes de realizar la encuesta, registre el consentimiento informado.</p>
+
+<label class="container"> 
+<input type="checkbox" [(ngModel)]="theCheckbox"  data-md-icheck (change)="toggleVisibility($event)"/>
+    Autorizo consentimiento <span *ngIf="marked">checked</span><span *ngIf="!marked">unchecked</span>
+
+  <span class="checkmark"></span>
+</label>
+
       <button (click)="auth.login()" *ngIf="!auth.loggedIn">Log In</button>
-  <button (click)="auth.logout()" *ngIf="auth.loggedIn">Log Out</button>
-    <a routerLink="profile" *ngIf="auth.loggedIn">Profile</a>  
+
+     
        </div>
       <div class="card-footer text-muted">
     Si decide no realizar el que consemiento informado, le agradecemos el tiempo que nos ha prestado. 
