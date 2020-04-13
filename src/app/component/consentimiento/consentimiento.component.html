@@ -36,7 +36,8 @@ Los investigadores clínicos se comprometen a garantizar la confidencialidad de 
            <div class="card-body">
     <h5 class="card-title ">Consentimiento informado</h5>
     <p class="card-text">Por favor, antes de realizar la encuesta, registre el consentimiento informado.</p>
-       <a class="nav-link btn btn-primary" [routerLink]="['/encuesta']">Conforme</a>
+       <a class="nav-link btn btn-primary" *ngIf="auth.loggedIn" [routerLink]="['/profile']">Conforme</a>
+      
        </div>
       <div class="card-footer text-muted">
     Si decide no realizar el que consemiento informado, le agradecemos el tiempo que nos ha prestado. 

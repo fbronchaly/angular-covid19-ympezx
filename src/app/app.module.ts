@@ -16,12 +16,13 @@ import { Panel2Component } from './component/panel2/panel2.component';
 import { ConsentimientoComponent } from './component/consentimiento/consentimiento.component';
 import { EncuestaComponent } from './component/encuesta/encuesta.component';
 import { AuthService } from './auth.service';
+import { ProfileComponent } from './component/profile/profile.component';
 
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,APP_ROUTING,RouterModule ],
-  declarations: [ AppComponent, HelloComponent, CabeceraComponent, BodyComponent, FooterComponent, NavbarComponent, Panel1Component, Panel2Component, ConsentimientoComponent, EncuestaComponent],
+  declarations: [ AppComponent, HelloComponent, CabeceraComponent, BodyComponent, FooterComponent, NavbarComponent, Panel1Component, Panel2Component, ConsentimientoComponent, EncuestaComponent, ProfileComponent],
   bootstrap:    [ AppComponent ],
   providers: [AuthService]
 })
