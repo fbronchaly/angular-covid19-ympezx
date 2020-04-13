@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'; 
 // Rutas
 import { APP_ROUTING } from './app.routes';
 import { RouterModule } from '@angular/router';
@@ -23,7 +24,7 @@ import { ProfileComponent } from './component/profile/profile.component';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,APP_ROUTING,RouterModule ],
+  imports:      [ BrowserModule, FormsModule,APP_ROUTING,RouterModule,HttpClientModule ],
   declarations: [ AppComponent, HelloComponent, CabeceraComponent, BodyComponent, FooterComponent, NavbarComponent, Panel1Component, Panel2Component, ConsentimientoComponent, EncuestaComponent, ProfileComponent],
   bootstrap:    [ AppComponent ],
   providers: [AuthService,AuthGuard]
